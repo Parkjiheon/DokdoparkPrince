@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>어린 왕자</title>
+    <link rel="stylesheet" href="./fifthChapter.css">
+    <script src="./fifthChapter.js" defer></script>
+    <script src="https://kit.fontawesome.com/b0f29e9bfe.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <video id="videoBG" autoplay muted loop>
+        <source src="밤하늘.mp4" type="video/mp4">
+    </video>
+    <!--
+    <div class="anchor1">
+        <button class="movePage" type="button" onclick="location.href='./index.html' ">1부</button>
+        <button class="movePage"type="button" onclick="location.href='./index2.html' ">2부</button>
+        <button class="movePage"type="button" onclick="location.href='./index3.html' ">3부</button>
+        <button class="movePage"type="button" onclick="location.href='./index4.html' ">4부</button>
+        <button class="movePage"type="button" onclick="location.href='./index5.html' ">5부</button>
+        <button class="movePage"type="button" onclick="location.href='./index6.html' ">6부</button>
+        <button class="movePage"type="button" onclick="location.href='./index7.html' ">7부</button>
+        <button class="movePage"type="button" onclick="location.href='./index8.html' ">8부</button>
+    </div>
+    -->
+    <!--1장: 어린왕자와 만남(1~6) / 2장: 장미(7~9) / 3장: 소행성 여행(10~16) /4장: 지구에서의 여행(17~23) / 5장: 이별(24~27)-->
+    <div class="navigation">
+        <div class="menuToggle"></div>
+        <ul>
+            <li class="list" style="--clr:#f44336;">
+                <a href="../index.html">
+                    <span class="icon">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </span>
+                    <span class="text">홈</span>
+                </a>
+            </li>
+            <li class="list" style="--clr:#ffa117;">
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </span>
+                    <span class="text">마이 페이지</span>
+                </a>
+            </li>
+            <li class="list" style="--clr:#0fc70f;">
+                <a href="../components/Travel/travel.html">
+                    <span class="icon">
+                        <ion-icon name="balloon-outline"></ion-icon>
+                    </span>
+                    <span class="text">여행하기</span>
+                </a>
+            </li>
+            <li class="list" style="--clr:#2196f3;">
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="square-outline"></ion-icon>
+                    </span>
+                    <span class="text">광장</span>
+                </a>
+            </li>
+            <li class="list" style="--clr:#b145e9;">
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="help-circle-outline"></ion-icon>
+                    </span>
+                    <span class="text">묻고 답하기</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="wholePage">
+        <button id="prev-btn">
+            <i class="fas fa-arrow-circle-left"></i>
+        </button>
+        <!-- Book -->
+        <div id="book" class="book">
+            <!-- Paper 1 -->
+            <div id="p1" class="paper">
+                <div class="front">
+                    <div id="f1" class="front-content">
+                        <image src="../illustrate/5.jpg" style="width:600px; height:750px;"></image>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b1" class="back-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <h1>24장</h1>
+                                <p>
+                                    비행기 고장으로 사막에 떨어진지도 이제 여덟째 날이 되어 가고 있었지. 
+                                    난 마지막 남은 물 한 방울을 마시며 상인 얘기를 들었어. 
+                                    "아!"라며 내가 어린 왕자에게 말했어. "네 추억의 사람들은 무척 아름답구나, 근데 난 비행길 아직도 못 고치고 있지 뭐니. 게다가 이젠 마실 물도 하나도 남지 않았어. 우물로 천천히 걸어갈 수만 있다면 그게 더 행복하긴 하겠는데." 
+                                    "내 친구, 여우는."라며 어린 왕자가 말했지.
+                                    "어린 친구, 여우는 더는 없단다!" 
+                                    "왜요?"
+                                    "여우를 만나기 전에 우리가 먼저 목말라 죽을 테니까..." 
+                                    내 설명이 선득 이해가 안갔는지 어린 왕자가 대꾸했지.
+                                    "죽더라도 좋은 친구를 만났잖아요. 전(저는) 여우를 친구로 만난 게 넘 기뻐요..."
+                                    "넌 전혀 걱정이란 게 없구나."라며 내가 말했지. 정말이지 어린 왕자는 타는 갈증도 전혀 느끼지 못하는 듯 했어. 그냥 약간의 햇빛이면 그에겐 충분해 보였지...
+                                    하지만 날 보던 어린 왕자가 내 그런 생각에 답했어. 
+                                    "목 말라요... 우리 우물을 찾으러 나가요..."
+                                </p>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 2 -->
+            <div id="p2" class="paper">
+                <div class="front">
+                    <div id="f2" class="front-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <p>
+                                    난 이미 지쳐 있었어. 이 광활한 사막 한 가운데서 무작정 우물을 찾아나설만큼 무모하지도 않았고 말이야. 
+                                    그치만 우린 걸음을 옮기기 시작했지.
+                                    수 시간을 걸었아. 말 없이 밤이 내렸고, 별들이 빛을 발하기 시작했지. 처음엔 이게 꿈인가도 싶었어. 이후 목이 타기 때문인지 약간의 열도 느꼈지. 곧 어린 왕자의 말이 내 머릿 속에서 춤을 추더군(타는 목마름으로 서서히 정신이 혼미해져 갔다는 얘기).
+                                    "목 마르니, 얘야?"라며 내가 어린 왕자에게 물었어.
+                                    그는 내 질문에 말이 없었지. 
+                                    그저 이렇게 말할 뿐이었어. 
+                                    "물은 마음에도 좋아요..."
+                                    그의 말이 무슨 뜻인지 선득 와닿지 않아 난 입을 다물었어... 굳이 더 질문할 것도 없었지. 어린 왕자도 이젠 지쳤던 게야. 
+                                    순간 어린 왕자가 주저앉았어. 
+                                    나도 그의 옆에 가 앉았지. 
+                                    잠시 후 그 애가 다시 말했어.
+                                    "별들이 아름다운 건, 보이지 않는 꽃(꽃 한 송이)을 지니고 있기 때문이에요..." 
+                                    "그야,"라며 내가 말 없이 달빛 아래 펼쳐진 무수히 많은 모래 언덕들을 보며 말했어.
+                                    "사막은 아름다워요."라며 어린 왕자가 덧붙였지.
+                                    그건 사실이었어. 난 항상 사막을 동경했을 정도니까. 모래 언덕 위에 앉아 있음 아무 것도 안 보이고 아무 소리도 안 들렸지. 그럼에도 사방에서 고요의 원이 빛을 발한다랄까...
+                                    "사막이 아름다운 건,"라며 어린 왕자가 말했어. " 어딘가에 우물을 숨기고 있기 때문이에요..."
+                                    순간 이 신비로운 모래 사막의 광채의 비밀이 이해되어 난 깜짝 놀랐지. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b2" class="back-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <p>
+                                    난 어릴 적 오래된 집에 살았었어. 
+                                    집 어딘가에 보물이 감추어져 있다는 전설이 내려오던 집이었지. 
+                                    물론, 누구도 그걸 발견하진 못했지, 굳이 찾아나서는 이도 없었고 말이야. 
+                                    그치만 내 집 어딘가에 보물이 묻혀 있다는 건, 어린 내 시절 전체를 광채로 뿌려주었고 내 마음 깊은 곳에 밝은 미지의 비밀 아지트를 만들어주었지.
+                                    "그래,"라며 내가 어린 왕자에게 말했어. "집이 되었건, 별이나 사막이 되었건, 진정한 아름다움은 안 보이는 법이지!" 
+                                    "당신도 내 여우와 같은 말을 하신다니,"라며 어린 왕자가 말했어. "넘 기뻐요."
+                                    이내 어린 왕자는 잠에 떨어졌어. 
+                                    난 그 애를 품에 앉고 다시 발걸음을 옮기기 시작했어. 
+                                    난 감동받은 상태였거든. 
+                                    마치 부러지기 쉬운 보물을 옮기는 양. 
+                                    지구에서 이보다 더 연약한 존재도 없어 보이는 애였으니까. 
+                                    달빛에 그 애의 창백한 이마와, 감은 두 눈, 바람에 산들거리는 머릿결이 보였어. 
+                                    난 혼잣말을 했지. 
+                                    "눈에 보이는 건 겉가지일 뿐이야. 정작 중요한 건 눈에 보이지 않아..."
+                                    어린 왕자의 반쯤 열린 입술이 살며시 미소를 지었지. 
+                                    난 혼잣말을 했지. 
+                                    "자는 어린 왕자에게서 이토록 강렬히 감동받은 이유는 자기 꽃에 대한 이 애의 충실함 때문이야. 램프 등이 타오르는 것처럼 이 애에게서도 장미 한 송이가 빛을 발하고 있어, 심지어 자고 있는 이 와중에도..." 
+                                    난 이 순간 세상에서 가장 연약하고 꺼지기 쉬운 램프 불을 보호할 필요성을 느끼고 있었지. 
+                                    바람 한 번에도 꺼질 수 있는 연약한 이 아이를 말이야...
+                                    그렇게 무작정 걷던 난 동틀 무렵 우연히도 우물을 발견하고야 말았어.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 3 -->
+            <div id="p3" class="paper">
+                <div class="front">
+                    <div id="f3" class="front-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <h1>25장</h1>
+                                <p>
+                                    "사람들은,"라며 어린 왕자가 말했지. "서둘러 기차를 타고 가면서도, 정작 자신들이 무얼 찾아나서는지를 몰라요. 그저 자기 주변을 돌고 돌고 또 멤돌 뿐이죠..."
+                                    그러더니 어린 왕자가 덧붙였어. 
+                                    "그건 다 쓸모 없는 일인거에요..."
+                                    우리가 닿은 그 우물은 사하라(아프리카의 사막 이름)의 어느 우물들과는 달랐어. 
+                                    사라하의 우물들은 모래에 구멍 하나만 간신히 파놓은 것이었는데 반해, 지금 우리가 찾은 이 우물은 마을 우물과 닮아 있었지. 
+                                    물론 근처엔 마을이 있을 리 없었기에, 난 마치 꿈을 꾸고 있는 것만 같은 기분이 들었어.
+                                    "낯선데,"라며 내가 어린 왕자보고 말했지. "모든 게 다 있어. 도르래(바퀴에 줄을 매단 거)며, 물통이며, 밧줄까지도..." 
+                                    어린 왕자는 웃더군. 
+                                    그러더니 손을 뻗어 밧줄을 잡더니 도르래를 잡아 당기기 시작했어. 
+                                    그 순간 마치 오랜 잠을 자던 오래된 풍차가 끙끙 신음소리를 내며 찬란히 되살아는 듯 그 도르래도 끙끙 소리를 내며 움직이기 시작했어.
+                                    
+                                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b3" class="back-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <img src="./images/우물.png" style="width: 400px; height:400px;">
+                                <p>
+                                    "들어보세요,"라며 어린 왕자가 말했어. "우물이 깨어나 노래를 부르고 있어요..."
+                                    아무래도 이 애가 힘을 쓰게 하는 건 아닌 거 같았어.
+                                    "내게 다오,"라며 내가 말했지. "그건 네겐 너무 무겁겠구나."
+                                    난 그 물통을 천천히 잡아당겨 우물 난간 위로 끌어올렸지. 
+                                    그 사이 추(바퀴 같은 거. 도르래의 추를 말하는 거 같음)에선 연신 소리가 나며, 도르래의 노랫소리를 내 귓가로 들려주었다. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 4 -->
+            <div id="p4" class="paper">
+                <div class="front">
+                    <div id="f4" class="front-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <p>
+                                    안녕하세요."라며 어린 왕자가 말했어. 
+                                    "안녕."라며 상인이 말했지.
+                                    그 상인은 목마름을 달래주는 정교한 알약들을 팔고 있었데. 한 번 삼키면 1주일은 그냥 아예 물을 마시고 싶은 욕망이 살아지는 그런 알약 말이야.
+                                    "왜 그걸 파시는데요?"라며 어린 왕자가 물었데.
+                                    "시간을 엄청 절약시켜주기 때문이지,"라며 그 상인이 말했데. "전문가들의 계산에 의하면, 이 알약 하나로 1주일에 53 분을 절약해준단다."
+                                    "그럼 그 아낀 53분으로 무얼 하게요?" 
+                                    "원하는 걸 하면 되지..."
+                                    "제게,"라며 어린 왕자가 말했어. "53분이 생긴다면, 우물 쪽으로 천천히 걸어갈텐데."
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b4" class="back-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <p>
+                                    고요히 출렁이는 물 위로 요동치는 햇살이란...
+                                    "저 목 말라요,"라며 어린 왕자가 말했어. "물 좀 주세요." 
+                                    난 그제야 어린 왕자가 바라던 게 뭔지 헤아리게 된 거야!
+                                    난 물통을 들어 그 애의 입가에 가져다 주었지. 
+                                    그 애는 마셨어. 
+                                    두 눈을 질근 감은 채. 
+                                    파티처럼 달콤했어. 
+                                    물은 음식보다 더 값졌어. 
+                                    더구나 별들과 도르래의 노랫소리를 들으며 내 두 팔로 이룬 노동의 결과로써 얻은 물은 더욱 더 그랬어. 
+                                    선물을 받았을 떄의 마음이랄까. 
+                                    내가 어린 소년이었을 때, 크리스마스 트리의 불빛, 자정에 모인 사람들의 음악소리들, 내가 받은 크리스마스 선물들에서 뿜어져나오는 광채(=빛)로 달아오른 내 미소의 달콤함.
+                                    "당신 별 사람들은,"라며 어린 왕자가 말했어. "한 정원에서만 오천 송이가 넘는 장미를 키워요, 그러고도 정작 자신들이 찾던 걸 못 찾아요."
+                                    "찾던 걸 못 찾고 말고."라며 내가 말했지.
+                                    "그치만 그건 장미 하나 물 한 모금에서도 찾을 수 있던 거예요..."
+                                    "물론이지."라며 내가 말했어.
+                                    "눈에 안 보이는 거예요. 마음으로 봐야 하는 걸요."
+                                    난 물을 마셨어. 한결 숨쉬기가 편해졌지. 
+                                    동이 틀 무렵의 모래사막은 흡사 벌꿀색이었어. 
+                                    이 벌꿀색은 내가 무척이나 좋아하는 색이었지. 
+                                    내게 무슨 문제가 있는 걸까?, 어린 왕자가 내 옆으로 다시 앉으며 말했지.
+                                    "약속 지키셔야 해요."
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 5 -->
+            <div id="p5" class="paper">
+                <div class="front">
+                    <div id="f5" class="front-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <p>
+                                    "무슨 약속?"
+                                    "아시잖아요... 제 양에 입마개를 그려주는 거요... 제 꽃도 책임줘주셔야 해요!"
+                                    난 내 호주머니에서 그림 몇 장을 꺼냈지. 
+                                    어린 왕자가 그걸 보더니 웃으면서 말했어. 
+                                    "바오밥나무 그림은 너무 못 그렸어요, 마치 양배추 같아요..."
+                                    "오!"
+                                    내 그림 실력에 얼마나 자긍심을 느끼게 차에 바오밥나무라니!
+                                    "아저씨가 그린 여우는... 귀가... 너무 길어서... 뿔 같아요!" 
+                                    어린 왕자가 다시 웃었지.
+                                    "이거 부당한데, 얘야, 난 닫힌 보아 뱀과 열린 보아 뱀 밖에 그려본 적이 없는 걸."
+                                    "오! 그래도,"라며 어린 왕자가 말했지. "아이들은 다 알아볼 거에요."
+                                    그래서 급히 입마개를 그려주었지. 
+                                    그 그림을 건네주는데 마음이 ‘아려’(=미어져=아련해져=슬퍼) 오더라.
+                                    "그래 앞으로 어떻게 할 거니..."
+                                    그치만 어린 왕자는 내 말에 답하지 않고, 이렇게 말했어. 
+                                    "있죠, 내일이 일년째에요... 지구에 온지..."
+                                    그러다 잠시 말을 멈추곤 이렇게 말하더군. 
+                                    "이 근처 가까이에 떨어졌었는데..."
+                                    어린 왕자가 얼굴을 붉혔어.
+                                    그 말이 이해되지 않았음에도, 왠지 모르게 서글퍼졌어. 
+                                    그치만 곧 다른 질문이 내게로 날아왔지.
+                                    "그렇담 1주일 전 그 날 아침에 내가, 사람들이 사는 곳으로부터 천 킬로미터나 떨어진 곳에서 그것도 혼자 있는 널 우연히 만난 게 우연만은 아니란 소리구나! 내가 떨어진 곳으로 돌아가려던 참이었니?"
+                                    어린 왕자는 다시 얼굴을 붉혔어. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b5" class="back-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <p>
+                                    그래서 난 서둘러 이 말을 덧붙여야했지. 
+                                    "아님 생일이었니(아님 기념하려고)?"
+                                    어린 왕자가 다시 얼굴을 붉혔어. 
+                                    이후 그 애로부터 더는 질문이 없었어. 
+                                    그 애가 얼굴을 붉힐 때면 그건 꼭 내게 "예"라고 말하는 거란 생각이 들었어.
+                                    "아, 이거!"라며 내가 말했지. "웬지 두려운데." 
+                                    그치만 이번엔 그 애도 대답을 해주었지.
+                                    "하실 일이 있으시지 않았어요. 기계로 돌아가셔야죠. 전(저는) 여기서 기다리고 있을 게요. 내일 밤 이곳으로 다시 돌아와주세요..."
+                                    하지만 난 확신하지 못했지. 아니 쉬이 용기가 나지 않더라는 말이 더 어울리겠군. 
+                                    여우 얘기가 떠올랐기 때문이야. 
+                                    서로에게 길들여지게 되면 눈물 흘릴 일도 같이 생기게 되는 법이란 걸 말이야...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 6 -->
+            <div id="p6" class="paper">
+                <div class="front">
+                    <div id="f6" class="front-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <h1>26장</h1>
+                                <p>
+                                    그 우물가 옆엔 무너진 돌담 하나가 있었어. 
+                                    다음날 저녁 내가 일을 마치고 돌아왔을 때, 멀찍이에서부터 그게 보였어, 어린 왕자가 두 다리를 흔들며 그 돌담에 앉아 있는 것이. 
+                                    물론 그 애가 말하는 소리도 들렸어.
+                                    "그래서 기억 안 나니?"라며 어린 왕자가 말했지. 
+                                    "딱 여긴 아니었잖니!"
+                                    아마 다른 목소리가 대답을 한 모양이었어. 
+                                    왜냐면 어린 왕자가 곧 이렇게 대꾸했기 때문이지. 
+                                    "그래! 그래! 그날 말이야, 하지만 여긴 아니었지..."
+                                    난 그쪽 돌담 쪽으로 계속 걸어갔어. 
+                                    그치만 아무도 보이지 않았어 그렇다고 목소리가 들리는 것도 아니었어. 
+                                    오직 어린 왕자가 이렇게 대답하는 게 들릴 뿐이었지.
+                                    "...그야 물론이지. 모래에 남긴 내 발자국을 봐봐. 넌 그냥 나만 기다리면 돼. 오늘 밤 다시 올게." 
+                                    난 돌담 20미터 앞까지 왔지만 여전히 누구도 보이지 않았어.
+                                    잠시 잠자코 있던 어린 왕자가 다시 말했지.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b6" class="back-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <p>
+                                    "네 독은 착한 독이니? 날 너무 오랫동안 아프게 하고 그런 건 아니지?"
+                                    난 걸음을 멈췄어, 마음이 조여왔거든, 그치만 여전히 그게 무슨 상황인지 감이 오지 않고 있었지. 
+                                    "이제 됐어,"라며 어린 왕자가 말했어. "이젠 내려가줘!"
+                                </p>
+                                <img src="./images/노란 뱀.png" style="width: 400px; height:400px;">
+                                <p>
+                                    그제야 난 고개를 낮추어 돌담 아래를 보았지. 
+                                    순간 난 뛰고 말았어! 
+                                    어린 왕자 앞엔, 30초면 생명을 앗아갈 수 있는 노란 뱀 하나가 떡하니 버티고 있었던 거야. 
+                                    난 얼른 호주머니에서 내 연발 권총을 꺼내며 발을 내딨었지. 
+                                    그치만 내 발자국 소리에 뱀이 스르륵 모래 속으로 가라앉아버렸어. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 7 -->
+            <div id="p7" class="paper">
+                <div class="front">
+                    <div id="f7" class="front-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <p>
+                                    뱀 특유의 쉬쉬하는 소리를 내며 돌틈 사이로 스르륵 미끄러져 숨어버리고 만 거지. 
+                                    난 돌담에 다다르자마자 얼른 어린 왕자를 두 팔로 안아 받쳐 주어야했어. 
+                                    어린 왕자가 이미 눈처럼 창백해져 있었기 때문이야.
+                                    "무슨 일이니? 지금 뱀과 얘기를 하고 있었던 거니!"
+                                    그 애가 입고 있던 고깔 달린 금빛 겉옷을 풀어주었어(옷의 단추를 풀어주었어). 
+                                    그런 다음 그 애 입에 물을 적셔주고 몇 모금 마실 수 있게도 해주었지. 
+                                    감히 무슨 일이 있었던 건지 더 무를 용기도 나지 않았어. 
+                                    그 애가 엄숙하게 날 바라 보더니 내 목을 자기 팔로 감쌌지. 
+                                    총에 맞아 다 죽어가는 작은 새의 맥박 소리 같은 게 내 체온으로 전해져왔어. 
+                                    그 앤 내게 말했지.
+                                    "비행기를 다 고치셨다니 기뻐요. 이젠 집에 돌아갈 수 있겠네요..."
+                                    "어떻게 안 거니!"
+                                    내가 막 그 얘길 하려던 참이었는데, 온갖 역경을 극복하고 난 그 일에 성공했던 것이다!
+                                    어린 왕자는 내 말엔 도통 대답하지 않고 이렇게 덧붙였지.
+                                    "저도, 오늘, 집에 가요..." 
+                                    그런 다음 침울한 목소리로.
+                                    "훨씬 더 멀고... 더 힘든 곳으로요..."
+                                    난 뭔가 심상치 않은 일이 벌어지고 있음을 직감할 수 있었지. 
+                                    난 그를 어린 아기 다루듯 품에 좀 더 안아주었어. 
+                                    그치만 내가 그러면 그럴수록 그 애는 뭔가 거부할 수 없는 심연의 깊이 속으로 빠져들고 있었던 거 같아.
+                                    어린 왕자는 넋이 나간 듯 심각한 표정을 지었지.
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b7" class="back-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <p>
+                                    "아저씨가 그려준 양들도 있고. 이제 양우리도 있어요. 이제 양들의 입마개만 있음..." 
+                                    난 침울한 미소를 지어 보였지.
+                                    한참을 기다렸더니 간신히 그 애의 몸이 조금씩 다시 따뜻해져왔어. 
+                                    "어린 것이, 얼마나 무서웠을까..."
+                                    물론 그 앤 정말 무서워하고 있었어! 
+                                    그치만 그 애는 살며시 웃어 보이고 있을 뿐이었지. 
+                                    "오늘 밤엔 더 무서울 거예요..."
+                                    그 말에 난 밑도 끝도 없이 한기(추움 또는 두려움)를 느꼈어. 
+                                    어린 왕자의 웃음소리를 다신 들을 수 없다는 생각에 견딜 수가 없었던 거야. 
+                                    그 웃음 소린 내게 사막의 오아시스와도 같았기 때문이지.
+                                    "얘야, 네 웃음소리가 듣고 싶을 게다..." 
+                                    하지만 그 앤 이렇게 말할 뿐이었어.
+                                    "오늘 밤이면 1년이 돼요. 그럼 제가 작년에 떨어진 그 장소 위로 제 별이 떠올라요..."
+                                    "얘야, 뱀, 또는 약속 장소, 또는 별에 관한 악몽을 꾸고 있는 건 아니니?"
+                                    그치만 그런 내 말엔 대꾸 않고서 그 애가 말했지. 
+                                    "중요한 건 눈에 보이지 않는 법이에요..." 
+                                    "물론이다..."
+                                    "저는 그 꽃이 좋았어요. 제가 어느 별에 있는 꽃을 사랑한다면, 전(저는) 밤마다 달콤해져 밤하늘을 올려다볼 거예요. 그럼 모든 별들이 다 사랑스러워 보일 거예요."
+                                    "물론이다..."
+                                    "물도 마찬가지예요. 아저씨가 제게 준 물 한 모금은 음악 같았어요. 기억나세요... 도르래와 밧줄로 끌어올린... 달콤했어요."
+                                    "물론이란다.,,"
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 8 -->
+            <div id="p8" class="paper">
+                <div class="front">
+                    <div id="f8" class="front-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <p>
+                                    "오늘 밤, 별들을 봐주세요. 어느 별이 제 별인지는 너무 작은 별이라 말씀드릴 순 없어요. 그래서 더 좋았어요. 제 별은 이제 아저씨에게도 수많은 별들 중 하나가 될 테니까요. 그럼 아저씨는 별들을 올려다보면서... 별들이 이제 아저씨의 친구가 되어 주는 거예요. 그럼 제가 선물을 드릴게요..."
+                                    어린 왕자가 다시 웃었어.
+                                    "아! 아가야, 아가야, 난 단지 네 웃음 소릴 듣고 싶을 뿐이란다!" 
+                                    "그게 제 선물이에요... 단물과도 같은..."
+                                    "무슨 말이니?"
+                                    "사람들에게 별들이 저마다 다 같은 건 아니에요. 여행을 하는 이들에게 별은 안내원이고, 몇몇에겐 고작 살짝 밝은 불빛에 지나지 않죠. 그리고 몇몇 학자들에겐 별들은 골칫거리지만, 상인에겐 금이죠. 하지만 별들은 모두 말이 없어요. 아저씬 이제 그 누구와도 다른 별을 가지게 된 거예요..."
+                                    "무슨 말이니?"
+                                    "아저씨가 밤 하늘을 바라볼 때면, 저 별들 중 하나에 제가 살고 있을 걸 알기에, 웃음 지을 수 있게 되는 거예요, 그럼 이제 아저씬 모든 별들을 보면서 미소 짓게 될 거예요. 웃음을 줄 수 있는 별을 품게 된 거죠!"
+                                    어린 왕자가 또 웃었어.
+                                    "우린 항상 위로가 필요해요, 아저씬 이제 위안이 되실 때면 저를 알게 된 게 기뻐질 거예요. 아저씬 항상 제 친구일 거니까요. 저와 함께 웃고 싶어질 거고. 때때로 창문을 여시면서도 기쁠 거예요... 그럼 하늘을 보며 웃고 있는 아저씨를 보며 친구들이 놀라겠죠. 그럼 이렇게 친구분들께 말해주시면 되세요. '그래, 별이, 저 별이 날 웃긴다네!'라고. 그럼 그들이 아저씰 제정신이 아니라 여기겠죠. 제가 너무 짓궂은 장난을 치는 건가요..."
+                                    어린 왕자가 또 웃었지.
+                                    "이런 별들 대신 웃을 수 있는 초인종들을 잔뜩 드리고 말았네요..." 
+                                    어린 왕자가 또 웃었어. 
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b8" class="back-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <p>
+                                    그러더니 다시 못내 심각해져선 말했지. 
+                                    "있죠... 오늘 밤엔... 오시지 마세요."
+                                    "널 내버려 두진 않을 거란다."
+                                    "전 아파 보일 거예요. 거의 죽은 듯 보일 거예요. 그러니 오시지 마세요, 오실 필요 없으세요..." 
+                                    "널 내버려 두진 않으마."
+                                    하지만 어린 왕자는 갈망했어(걱정했어).
+                                    "제가 이렇게 말하는 건... 네, 물론 그 뱀 때문이에요. 뱀이 아저씰 물면 안 돼요... 뱀들은 나빠요. 그냥 재미 삼아 물 수도 있어요..."
+                                    "널 떠나지 않으마."
+                                    하지만 뭔가 확신이 든 모양이었어.
+                                    "두 번째 물리면 더 이상 독기운은 없어요."
+                                    그날 밤 난 어린 왕자가 떠나는 걸 보지 못했다. 그 애는 너무도 황급히 떠나버렸다. 가까스로 내가 그 애와 다시 조우했을(만났을) 때, 그 앤 단호히 걷고 있었다, 빠른 걸음으로. 그 애가 내게 말했지.
+                                    "아! 여길 오시다니..."
+                                    그 애가 내 손을 잡으며 무척이나 힘들어했어.
+                                    "나빠요. 힘드실 텐데. 제가 죽은 듯이 보이겠지만, 그런 게 아니에요." 
+                                    난 말이 없었지.
+                                    "아시겠지만, 그곳은 너무도 멀어요. 이 몸으로 갈 수 없어요. 몸은 너무 무겁거든요."
+                                    난 말이 없었지.
+                                    "이제 제가 버려진 낡은 나무껍질로 보이시겠지요. 낡은 나무껍질이라고 슬픈 건 아니에요..." 
+                                    난 아무 말이 없었어.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 9 -->
+            <div id="p9" class="paper">
+                <div class="front">
+                    <div id="f9" class="front-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <p>
+                                    그 앤 살짝 낙담한 듯 보였어. 
+                                    하지만 곧 기운을 냈지.
+                                    "좋아요, 알잖아요. 저도 별들을 볼 거예요. 그럼 별들이 녹슨 도르래가 달린 우물들로 보일 거에요. 그럼 그 별들을 몽땅 다 들이킬 수 있으실 거예요..."
+                                    난 말이 없었어.
+                                    "그럼 너무 재미날 거 같아요! 아저씬 5억 개의 초인종들을 가지게 되고, 전(저는) 5억 개의 우물들을 가지게 되고..." 
+                                    그 앤 역시나 말이 없었다. 
+                                    곧 (어린 왕자가) 울기 시작했기 때문이다.
+                                    "여기서부턴, 혼자 가볼게요."
+                                </p>
+                                <img src="./images/여기서부터는 혼자 갈게요.png" style="width: 400px; height:400px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b9" class="back-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <p>
+                                    두려웠기에 어린 왕자는 주저앉고 말았다. 
+                                </p>
+                                <img src="./images/어린 왕자는 주저 앉았다.png" style="width: 400px; height:400px;">
+                                <p>
+                                    "있죠... 제 꽃에... 전(저는) 책임이 있어요! 그 앤 너무 약해요! 너무 여려서. 세상으로부터 자길 보호할 거라 곤 고작 가시 네(4) 개가 다인 애에요..."
+                                    더 이상 서 있을 수 없던 난 주저앉고 말았다. 
+                                    그 애가 말했다. 
+                                    "다 끝났어요 다요..."
+                                    그 애가 잠시 머뭇거렸다, 그러더니 다시 일어서더니. 한 걸음씩 내디뎠다. 
+                                    그치만 난 한 발자국도 더는 움직일 수가 없었다.
+                                    그 애의 발목 언저리(가까이)의 노란 섬광(빛 줄기)만이 보였다. 잠시 동안 그 애가 미동(움직임)도 없이 꿈쩍하지 않았다. 고함도 치지 않았다. 그 앤 그렇게 낙엽처럼 조용히 쓰러지고야 말았다. 
+                                    사방의 수북한 모래들 때문에, 심지어 아무런 소리도 나는 쓰러짐이었다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 10 -->
+            <div id="p10" class="paper">
+                <div class="front">
+                    <div id="f10" class="front-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <h1>27장</h1>
+                                <p>
+                                    물론 지금은 6년이 지난 얘기다... 
+                                    난 아직 누구에게도 이 얘기를 하지 않았다. 
+                                    내가 다시 살아온 걸 본 친구들은 기뻐했다. 
+                                    그치만 난 슬펐고 그들에게 이렇게 말할 뿐이었다. 
+                                    "좀 피곤해..."
+                                    지금에서야 그나마 좀 안정이 된 상태다. 
+                                    이 말은... 아직 완전히는 아니란 소리다. 
+                                    하지만 어린 왕자가 자기 별로 잘 돌아갔다는 건 알 수 있었다. 
+                                    왜냐면 동틀 무렵 주변을 살펴보았으나 그 어디에도 어린 왕자의 흔적을 찾을 수 없었기 때문이다. 
+                                    그리 무거운 몸은 아니었으니... 
+                                    어쨌든 그때부터는 나도 밤 하늘 별들의 얘기에 귀 기울이는 게 좋아졌다. 
+                                    자그마치 5억 개나 되는 종들 소리에 말이다...
+                                    지금 든 괴상한 생각 하나가 있다. 
+                                    어린 왕자에게 양을 위한 입마개를 그려주며 그만 깜빡 잊고 가죽끈을 달아주지 않았던 것이다! 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b10" class="back-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <p>
+                                    그렇담 어린 왕자는 어떻게 양들 입에 입마개를 달아준단 말인가. 
+                                    그래서 난 혼잣말로 내 자신에게 묻는다. 
+                                    "그 애 별에선 지금 무슨 일이 벌어지고 있는 걸까? 아마도 양들이 그 꽃을 먹었을까..."
+                                    때때로 난 내 자신에게 이렇게 대뇌이곤 한다. 
+                                    "그렇진 않을 거야! 어린 왕잔(왕자는) 분명 자신의 꽃을 매일 밤 유리덮개로 질 덮어줄 테니까, 그리고 양들도 잘 보살퍼줄 거고." 
+                                    그런 생각들을 하고 나면 난 지금 내가 무척 행복하단 생각이 들어 기분이 좋아진다. 
+                                    모든 별들이 내게 살며시 미소 짓는 기분이다.
+                                    때때로 난 이렇게 내 자신에게 되뇌이고도 한다. 
+                                    "한두 번만 방심해도 끝장인데! 어느 날 저녁 어린 왕자가 유리 덮개를 씌우는 걸 깜빡만 해도, 양들이 밤사이 재빨리 나와 그 꽃을..." 
+                                    그럼 종(=별)들이 눈물로 변했다(슬픈 생각을 하면 별들이 눈물로 보였다)...!
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 11 -->
+            <div id="p11" class="paper">
+                <div class="front">
+                    <div id="f11" class="front-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <img src="./images/어린 왕자가 떠난 곳.png" style="width: 400px; height:400px;">
+                                <p>
+                                    이건 큰 수수께끼였다. 
+                                    왜냐면 나와 같이 어린 왕자를 사랑하는 여러분들에겐, 우주에 어딨는지도 모르는 별의 양이 장미 한 송이를 먹어치울지 아님 아직 먹지 않았을지에 따라서도 세상이 무척이나 달라진다니 말이다...
+                                    하늘 보고 스스로에게 물어보자. 
+                                    "양아 너 꽃 먹었니 안 먹었니?" 
+                                    그럼 그 답에 따라 모든 별들이 변하는 게 보일 것이다... 
+                                    이 중요한 걸 어른들은 예나 지금이나 이해하지 못한다니!
+                                    이 그림(아래의 사막 그림)은, 내게, 세상에서 가장 아름다우면서도 슬픈 풍경이다. 
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b11" class="back-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <p>
+                                    앞 페이지에서 한 장 그렸던 거와 동일한 장소를, 난 여러분들께 한 번 더 보여드리기 위해 다시 한 장 더 그린 그림이 아래 그림이다. 
+                                    바로 여기가, 어린 왕자가 지구에 도착했다 사라진 곳이다.
+                                    
+                                </p>
+                                <img src="./images/다시 돌아와줘.png" style="width: 400px; height:400px;">
+                                <p>
+                                    이 장소를 눈여겨보아두었다가, 만에 하나 여러분들이 어느 날 저녁 아프리카 사막으로 여행을 가게 된다면 분명 이 장소를 알아볼 수 있을 것이다. 
+                                    그리고 만에 하나라도 우연히 이곳을 지나치게 된다면, 내 부디 간청하건대, 너무 서둘지는 말고, 잠시 별빛 아래 바로 이 장소서 잠시만 기다려보시라! 
+                                    그럼 짜잔 하고서 한 어린 아이가 여러분들께 다가와 방긋 웃어줄 것이다!
+                                    만약 황금 머릿결을 한 그 아이가, 여러분들이 던진 그 어떤 질문에도 쉬이 답해주지 않는다면, 그 애가 누구인지 짐작할 수 있을 것이다. 
+                                    그럼 부디 친절을 베푸시어! 
+                                    내 슬픔이 조금이라도 가시게. 
+                                    “어린 왕자가 다시 돌아왔노!”라고 내게 전보(빠른 편지) 한 통만 부쳐 달라...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 12 -->
+            <div id="p12" class="paper">
+                <div class="front">
+                    <div id="f12" class="front-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                끝!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b12" class="back-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 13 -->
+            <div id="p13" class="paper">
+                <div class="front">
+                    <div id="f13" class="front-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b13" class="back-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Paper14-->
+            <div id="p14" class="paper">
+                <div class="front">
+                    <div id="f14" class="front-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b14" class="back-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                끝!!!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Next Button -->
+        <button id="next-btn">
+            <i class="fas fa-arrow-circle-right"></i>
+        </button>
+        <!--페이지가 다 끝나면 나타나야함.-->
+        <div class="quizShow">
+            <div class="home-box custom-box">
+                <h3>단원명</h3>
+                <p>전체 문제 수: <span class="total-question"></span> 문제</p>
+                <button type="button" class="btn" onclick="startQuiz()">시작!!</button>
+            </div>
+
+            <div class="quiz-box custom-box hide">
+                <div class="question-number">
+         
+                </div>
+                <div class="question-text">
+         
+                </div> 
+                <div class="option-container">
+         
+                </div>
+                <div class="next-question-btn">
+                    <button type="button" class="btn" onclick="next()">다음 문제</button>
+                </div>
+                <div class="answers-indicator">
+          
+                </div>
+            </div>
+        
+            <div class="result-box custom-box hide">
+                <h1>결과</h1>
+                <table>
+                    <tr>
+                        <td>전체 문제 수</td>
+                        <td><span class="total-question"></span></td>
+                    </tr>
+                    <tr>
+                        <td>풀어본 문제 수</td>
+                        <td><span class="total-attempt"></span></td>
+                    </tr>
+                    <tr>
+                        <td>맞춘 문제 수</td>
+                        <td><span class="total-correct"></span></td>
+                    </tr>
+                    <tr>
+                        <td>틀린 문제 수</td>
+                        <td><span class="total-wrong"></span></td>
+                    </tr>
+                    <tr>
+                        <td>정답률</td>
+                        <td><span class="percentage"></span></td>
+                    </tr>
+                    <tr>
+                        <td>당신의 점수는?</td>
+                        <td><span class="total-score"></span></td>
+                    </tr>
+                </table>
+                <button type="button" class="btn" onclick="tryAgainQuiz()">다시 풀어볼까요?</button>
+                <button type="button" class="btn" onclick="goToHome()">처음으로</button>
+            </div>
+        
+        </div>
+    </div>
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

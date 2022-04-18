@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>어린 왕자</title>
+    <link rel="stylesheet" href="./firstChapter.css">
+    <script src="./firstChapter.js" defer></script>
+    <script src="https://kit.fontawesome.com/b0f29e9bfe.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <video id="videoBG" autoplay muted loop>
+        <source src="밤하늘.mp4" type="video/mp4">
+    </video>
+    <!--
+    <div class="anchor1">
+        <button class="movePage" type="button" onclick="location.href='./index.html' ">1부</button>
+        <button class="movePage"type="button" onclick="location.href='./index2.html' ">2부</button>
+        <button class="movePage"type="button" onclick="location.href='./index3.html' ">3부</button>
+        <button class="movePage"type="button" onclick="location.href='./index4.html' ">4부</button>
+        <button class="movePage"type="button" onclick="location.href='./index5.html' ">5부</button>
+        <button class="movePage"type="button" onclick="location.href='./index6.html' ">6부</button>
+        <button class="movePage"type="button" onclick="location.href='./index7.html' ">7부</button>
+        <button class="movePage"type="button" onclick="location.href='./index8.html' ">8부</button>
+    </div>
+    -->
+    <!--1장: 어린왕자와 만남(1~6) / 2장: 장미(7~9) / 3장: 소행성 여행(10~16) /4장: 지구에서의 여행(17~23) / 5장: 이별(24~27)-->
+    <div class="navigation">
+        <div class="menuToggle"></div>
+        <ul>
+            <li class="list" style="--clr:#f44336;">
+                <a href="../index.html">
+                    <span class="icon">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </span>
+                    <span class="text">홈</span>
+                </a>
+            </li>
+            <li class="list" style="--clr:#ffa117;">
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </span>
+                    <span class="text">마이 페이지</span>
+                </a>
+            </li>
+            <li class="list" style="--clr:#0fc70f;">
+                <a href="../components/Travel/travel.html">
+                    <span class="icon">
+                        <ion-icon name="balloon-outline"></ion-icon>
+                    </span>
+                    <span class="text">여행하기</span>
+                </a>
+            </li>
+            <li class="list" style="--clr:#2196f3;">
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="square-outline"></ion-icon>
+                    </span>
+                    <span class="text">광장</span>
+                </a>
+            </li>
+            <li class="list" style="--clr:#b145e9;">
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="help-circle-outline"></ion-icon>
+                    </span>
+                    <span class="text">묻고 답하기</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="wholePage">
+        <button id="prev-btn">
+            <i class="fas fa-arrow-circle-left"></i>
+        </button>
+        <!-- Book -->
+        <div id="book" class="book">
+            <!-- Paper 1 -->
+            <div id="p1" class="paper">
+                <div class="front">
+                    <div id="f1" class="front-content">
+                        <image src="../illustrate/1.jpg" style="width:600px; height:750px;"></image>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b1" class="back-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <p>여섯 살 시절 나는 『모험기』라는 제목의 원시림 이야기책
+                                    에서 멋진 그림 하나를 본 적이 있다. 맹수를 삼키는 보아 뱀 
+                                    그림이었다. 위의 그림은 그걸 옮겨 그려 본 것이다.</p>
+                                    <br><br>
+                                    <image src="./images/황갈색 보아 뱀.png" style="width:400px; height:400px;">
+                                    <br><br>
+                                    <p>책엔 이렇게 쓰여 있더라, 보아 뱀은 씹지도 않고 산 채로 먹이를 삼킨다. 그런 다음엔 소화를 위해 여섯 달 동안 꿈쩍도 않고 잠만 잔다,라고.
+                                    </p>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 2 -->
+            <div id="p2" class="paper">
+                <div class="front">
+                    <div id="f2" class="front-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <p>난 정말 이 얘기를 듣고 정글의 모험에 관한 수많은 생각들이 들었어. 
+                                    그래서 색연필로 내 첫 번째 그림을 그려보기 시작했지. 
+                                    그게 바로 이거야.</p>
+                                    <br><br>
+                                    <image src="./images/솜브레로.png" style="width:500px; height:200px;">
+                                    <br><br>
+                                    <p>난 이 걸작을 어른들께 보여드리며 내 그림이 무섭지 않냐고 물어보았어. 
+                                        그들은 말했지. 
+                                        뭐가 그리 무섭다는 거니?
+                                        내 그림은 그냥 모자가 아닌데 말이야. 아니라고, 코끼리를 소화시키고 있는 보아 뱀이라고. 
+                                        그래서 보아 뱀 안에도 그려줬더니 그제야 어른들은 이해를 하지 뭐야. 
+                                        항상 이런 식이었어, 어른들은 설명이 필요해. 
+                                        내 두 번째 그림을 봐봐.                                        
+                                    </p>
+                                    <image src="./images/보아 뱀.png" style="width:500px; height:200px;"></image>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b2" class="back-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <p>여튼 어른들은 내게 충고하길 엉뚱한 보아 뱀이나 그리지 말고 지리, 역사, 샘(계산)이나 문법에 취미를 들어봐라. 
+                                    그리하여 난 여섯 날 때 이미 화가의 꿈을 접어야 했지. 
+                                    내 첫 그림과 두 번째 그림이 영 쓸모 없게 되자 낙담하고 말았거든. 
+                                    나의 이런 일들에 대해 어른들은 물론 관심도 없었고 말이야. 
+                                    설명을 해대는 아인 피곤하다는 투(말투)였었지.
+                                    그래서 다른 직업을 선택하게 된 거야. 
+                                    그게 바로 하늘을 나는 비행사였지. 
+                                    난 정말 전 세계를 날아다녔어. 그리 되니 지리학도 좀 도움이 되데. 난 중국이나 ‘애리조나’(미국의 주 이름)도 한눈에 첫 보면 알아보게 되었지. 
+                                    물론 밤에 길을 잃을 때면 지리학에 대한 앎이 많은 도움이 되었고 말이야.
+                                    살아오며 다양한 사람들을 만났어, 대갠 심각한 어른들이였지. 
+                                    물론 난 그들 사이에서 살아야 했으니깐. 
+                                    그럼 난 그들에게도 내 그림을 보여 주었지. 내 의견을 개진하지 않고 말이야.
+                                    명석해 보이는 어른들을 만날 때면 난 아끼며 보관해 오던 내 소중한 첫 번째 그림을 보여주었어. 그들이 정말로 이해할까 알고 싶었거든. 
+                                    하지만 대답은 항상 같았어. 
+                                    모자군요. 
+                                    그럼 난 보아 뱀 얘긴 꺼내지도 않았지, 물론 숲 얘기나 별 얘기도 하지 않았고 말이야. 
+                                    난 그들에게 내 자신을 맞추며(낮추며), 기껏 '브리지'(카드 게임의 일종), 골프, 정치 그리고 술에 관한 얘기만 잔득 할 뿐이었지. 
+                                    아~ 그럼 어른들은 죄다 날 합리적인 사람이라 무척 기뻐하며 칭찬들 하지 뭐야.
+                                    </p>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 3 -->
+            <div id="p3" class="paper">
+                <div class="front">
+                    <div id="f3" class="front-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <h1>2장</h1>
+                                <p>
+                                    그래 난 혼자 살게 되었어, 얘길 나눌 누군가도 없이 말이야, 6년 전 사하라 사막에서 새벽을 맞을 때까지. 
+                                    비행기 엔진에 뭔가 고장이 있었나봐. 
+                                    정비공도 일행도 없었기에 처음엔 고쳐보려 혼자 애도 써보았는데. 
+                                    근데 사실 마실 물도 1주일 분밖에 남아 있지 않아서 이건 완전 죽고 사는 문제까지 갔지.
+                                    거주지(도시)로부터 천 킬로미터는 멀리 떨어진 모래사막에서 첫날 밤을 맞았어. 
+                                    마치 바다 한 가운데 외딴 뗏목 위에 홀로 내던져진 그런 기분이더라. 
+                                    근데 새벽에 뭔가 살짝 익살맞은 목소리가 나를 깨우는 거 같아 깜짝 놀랐지 뭐야. 
+                                    이렇게 말하더라.
+                                    "양 한 마리 그려주세요!" 
+                                    "어 뭐라고!"
+                                    "양 그려 달라고요..."
+                                    순간 번개에 맞은 듯 난 벌떡 일어나고 말았지. 
+                                    난 눈을 비비며 보고 또 보고 말았지. 
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b3" class="back-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <p>그건 정말이지 괴상하게 생긴 어린 아이가 사뭇 진지한 표정으로 나를 내려다보고 있지 않겠어. 
+                                    난 후에 그 애의 초상화를 그릴 수 있었단다, 그게 바로 이거야.
+                                    </p>
+                                    <br><br>
+                                    <image src="./images/어린 왕자.png" style="width:400px; height:400px;">
+                                    <br><br>
+                                    <p>물론 내 그림은 실제 모습보단 못해. 
+                                        그게 내 실수는 아니란다. 
+                                        알다시피 난 여섯 살 때 이미 어른들에 의해 화가의 꿈을 접었잖니. 
+                                        그때까지 내가 그려본거라곤 닫힌 보아 뱀과 열린 보아 뱀이 다였으니까.
+                                        여튼 난 이 ‘환영’(어린 왕자의 휘황찬란한 모습)을 정말 눈이 휘둥그레져선 보았어.                                   
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 4 -->
+            <div id="p4" class="paper">
+                <div class="front">
+                    <div id="f4" class="front-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <p>그 순간만큼은 내가 주거지(도시)로부터 일천 킬로미터 이상 떨어져 있다는 사실도 잊고 말았지. 
+                                    이 작은 친구는 나처럼 길을 잃은 것도, 그렇다고 피곤에 겨운 것도, 그렇다고 목이 마르다거나, 배가 고프거나 두려운 것도 아니었어, 그런 기색일랑은 전혀 보이지 않고 있었지. 
+                                    그에의 그 어디에도 사막 한 가운데서 길을 잃은 아이의 모습은 찾아 볼 수 없었으니 말이야, 그것도 자그마치 천 킬로미터 떨어진 사막에서 보게 될 그런 옷차램의 아이가 전혀 아니었던 거야. 
+                                    난 간신히 정신을 차리고 결국 말을 거는데 성공하고 말았지. 
+                                    난 이렇게 말했어.
+                                    "여기서 뭐하는 거니?"
+                                    그랬더니 그 애는 좀 더 진심어린 얌전한 말투로 되풀이해 말하더라. 
+                                    "양 한 마리만 그려 달라고요..."
+                                    신비로움이 너무도 강렬할 땐 거부치 못하는 법이지. 
+                                    주거지로부터 천 킬로미터 떨어져서 사경을 헤매는 내가 그 순간만큼은 전혀 거부감없이 호주머니에서 종이와 펜을 꺼냈단다. 
+                                    하지만 내가 그동안 지리와 역사 그리고 셈(계산)과 문법만 배워왔단 걸 금새 기억해내곤, 그 애에게 약간 언짢아하며, 난 그림을 그릴 줄 모른단다,라고 말했지. 
+                                    그 애가 말했어.
+                                    "그게 중요한 게 아니잖아오. 양 한 마리만 그려주세요."
+                                    난 한 번도 양을 그려본 적이 없었네. 
+                                    순간 내가 그릴 수 있는 두 가지 그림들 중 하나가 생각났지. 그건 닫힌 보아 뱀이었어. 
+                                    이후 그 애의 말을 듣고 난 깜짝 놀라고 말았지.
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b4" class="back-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <p>"아니 ! 아니 ! 보아 뱀에 갇힌 코끼리가 아니라... 아이 참 보아 뱀은 아주 위험하잖아요. 코끼린 또 너무 성가시고요. 제가 사는 곳은 작아서, 전(저는) 양이 필요하다고요. 양 그려주세요."</p>
+                                    <br><br>
+                                    <image src="./images/양1.png" style="width:500px; height:200px;">
+                                    <br><br>
+                                    <p>그래서 그렸단다.
+                                        그 애는 이번엔 좀 주의 깊게 살피더군.
+                                        "아니요! 얘는 아프잖아요. 다른 애로 그려주세요."                                                                        
+                                    </p>
+                                    <image src="./images/양2.png" style="width:500px; height:200px;"></image>
+                                    <p>또 그렸다네.
+                                        내 친구가 조용히 미소짓더군, 남의 결점에 너그러운 그런 미소 있지 않는가. 
+                                        "아이 참... 얜 양이 아니잖아오, 얜 숫양이라고요, 뿔이 있는..."
+                                        </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 5 -->
+            <div id="p5" class="paper">
+                <div class="front">
+                    <div id="f5" class="front-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                    <image src="./images/양3.png" style="width:500px; height:200px;">
+                                    <br><br>
+                                    <p>그래서 난 이번에도 조용히 그림을 그렸지. 
+                                        그치만 앞서처럼 그에게 퇴짜를 당하고 말았지.
+                                        "얜 너무 나이가 많잖아요. 전 오래 살 양을 원한다고요."
+                                        그래서 인내력에 고갈을 느낀 난 엔진의 장비를 떼어내며 쓱쓱 이 그림을 날린 스케치로 그려주고 말았지.                                                                      
+                                    </p>
+                                    <image src="./images/양4.png" style="width:500px; height:200px;"></image>
+                                    <p>이것을 건네며 내가 말했지.
+                                        "이건 상자야. 내가 원하는 양들은 이 안에 있단다."
+                                        근데 내 어린 감식가의 눈이 환히 빛나지 않겠어, 난 무척 놀랐단다. 
+                                        "정확히 제가 바라던 그림이에요! 얘들은 풀을 많이 뜯어먹나요?"
+                                        "왜 그걸 묻는 거니?"                                        
+                                        </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b5" class="back-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                    <p>"제가 사는 곳은 아주 작거든요..." 
+                                        "괜찮을 거다. 아주 작은 양이니까." 
+                                        그림에 고개를 푹 떨구며 그에게 말했어.
+                                        "그렇게 작지도 않구만. 그 애들이 자고 있어요..." 
+                                        그렇게 난 어린 왕자와 알게 되었단다.                                                                      
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 6 -->
+            <div id="p6" class="paper">
+                <div class="front">
+                    <div id="f6" class="front-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                    <h1>3장</h1>
+                                    <image src="./images/벼랑.png" style="width:500px; height:500px;">
+                                    <br><br>
+                                    <p>그 애는 어디서 왔을까.
+                                        그걸 알아차리는 데는 많은 시간이 걸렸지.                                                                                                               
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b6" class="back-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                    <p>내가 묻는 말을 어린 왕자는 영 들으려고 하지 않았거든. 
+                                        그치만 난 정말이지 우연찮게도 이런 말을 듣게 된 거야, 그건 무언가가 다 드러나는 그런 느낌이었지. 
+                                        그 애는 내 비행기를 처음 봤는데, 아 참 내 비행기를 여기서 굳이 그리진 않겠네, 나름 내가 그리기엔 좀 복잡하니까 말이야, 여튼 이리 말 하더군.
+                                        "이건 어떤 물건인가요?"
+                                        "물건이 아니란다. 나는 거지. 비행기란다. 내 비행기지."
+                                        난 내가 날 수 있다는 사실을 사뭇 자랑스럽게 말했지. 
+                                        그 애도 감탄하더라. 
+                                        "와! 그럼 아저씨도 하늘에서 떨어진 거예요!"
+                                        "응."라며 내가 겸손하게 말해주었지. 
+                                        "아! 넘 웃겨요..."
+                                        이 부분에서 어린 왕자가 어찌나 웃음을 터뜨리는지 난 무척 안달이 나고 말았단다. 
+                                        이때까지만 해도 적어도 내 심각한 인식이 지금 내 거침없는 불행에 자그마한 동정심을 기울여주고 있다 생각하던 차였거든. 
+                                        그런데 그 애가 이리 덧붙이지 않겠니.
+                                        "그럼 아저씨도 하늘에서 왔다는 거죠! 어떤 별인가요?"
+                                        뭔가 그 애의 존재에 대한 암시나 비밀 같은 게 염탐되는 기분이였어. 
+                                        그래서 내가 재차 물었지. 
+                                        "그럼 넌 별에서 왔다는 거니?"
+                                        그치만 그 앤 내 말에 아무 말도 하지 않았어. 
+                                        그냥 부드럽게 내 비행기를 바라보며 살며시 고개를 끄떡일 뿐이었지. 
+                                        "이걸 타고 그리 멀리서 왔을 법 하진 않네요."
+                                        그러더니 자신만의 몽상에 빠져들더군.                                                                                             
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 7 -->
+            <div id="p7" class="paper">
+                <div class="front">
+                    <div id="f7" class="front-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                    <p>그후 내가 좀 전에 그려준 그 양 그림을 호주머니에서 꺼내더니 마치 보물쳐다 보듯 빠져들지 않겠어.
+                                        "다른 별"이라니 정말 이 말에 내가 반신반의가 되어 좀 더 물어볼 요량으로 말을 더 건넸지. 도통 무슨 말인가 싶었거든.
+                                        "넌 어디서 왔니, 아가야? 집은 어느 쪽이니? 내 양들을 어디로 데려가고 싶었던 거니?"
+                                        생각에 잠겼던 그 애가 말했어.
+                                        "밤에 지낼 집으로 삼기엔 이 상자가 딱일 거 같아요."
+                                        "그야 물론이지. 네가 얌전하게만 굴면야, 난 낮에도 그 애들을 매어 놓을 수 있는 끈도 그려주마. 덤으로 말뚝도 하나 그려주고 말이다."
+                                        그 말이 어린 왕자에겐 적잖이 충격이었나봐. 
+                                        "붙들어 놓는다고요? 너무 우스운 생각 아니신가요!"
+                                        "그지만 묶어 놓지 않음 어디론가 달아나버리게 되고, 그럼 그 애를 잃게 되지 않니." 
+                                        이 부분에서 내 친구가 또 다시 웃음보를 터뜨렸지.
+                                        "가긴 어딜 간단 말이세요!"
+                                        "어디든 말이다. 곧장 앞으로 갈 수도 있잖니..." 
+                                        그러자 어린 왕자가 사뭇 진지해져선 한 마디 했지. 
+                                        "그건 안 중요해요, 제 집은, 아주 작단 말이에요!"
+                                        살짝 구슬퍼지는가 싶던 그 앤 아마 이리 덧붙였던 거 같다. 
+                                        "곧장 가도 얼마 못 간다고요..."                                                                                       
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b7" class="back-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                    <h1>4장</h1>
+                                    <p>곧 중요한 두 번째 사실을 알게 되었지.
+                                        그건 어린 왕자의 별이 자그마한 집보다 조금밖에 크지 않다는 거야!
+                                        사실 놀랄 일도 아니었어. 
+                                        지구, 목성, 화성, 금성과 같이 내가 익히 알던 큰 별들 외에도 만원경을 통해 보이지 않는 수 많은 다른 작은 별들의 존재를 난 이미 알고 있었으니까. 
+                                        보통 그런 작은 별 중 하나를 발견하게 되면 천문학자들은 숫자를 붙이곤 해. 
+                                        예를 들면 이런 식이지. 
+                                        "소행성 325"                                                                                                                                                       
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 8 -->
+            <div id="p8" class="paper">
+                <div class="front">
+                    <div id="f8" class="front-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                    <image src="./images/어린 왕자의 별, 소행성 B 612.png" style="width: 500px; height: 500px;">
+                                    <p>어린 왕자가 온 별이 소행성 B 612라고 내가 믿는 데에는 나름 이유가 있어.
+
+                                        이 소행성은 1909년도에 터키의 어느 천문학자가 만원경으로 딱 한 번 본 적이 있데.
+                                                                                                                                          
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b8" class="back-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                    <image src="./images/망원경.png" style="width:500px; height:200px;">
+                                    <br><br>
+                                    <p>그는 자신의 발견에 대해 국제 천문학회에서 어마어마한 시연을 해보였지. 
+                                        그치만 그가 입고 간 허름한 옷차림 때문에 아무도 그의 말을 믿으려 들지 않았어. 
+                                        어른들은 늘 그런 식이니까.                                                                    
+                                    </p>
+                                    <image src="./images/터키 옷을 착용한, 터키 천문학자.png" style="width:500px; height:200px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 9 -->
+            <div id="p9" class="paper">
+                <div class="front">
+                    <div id="f9" class="front-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                    <p>운이 좋게도, 소행성 B 612가 알려지게 된 결정적 계기는, 터키의 독재자가 자신의 국민들에게 모두 유럽식으로 옷을 입으라고 명령했기 때문이었데, 그가 “모두 유럽식으로 옷을 입지 않음 사형에 처하겠다”라고 엄포를 놓았던 거지. 그래서 아주 기품 있는 옷을 입고서 아까 그 천문학자가 1920년에 다시 자신의 발견에 대해 국제 천문학회에서 시연을 하게 된 거지. 
+                                        그러자 모두들 그의 말을 믿게 된 거야.                             
+                                    </p>
+                                    <image src="./images/유럽식 양복을 착용한, 아까 그 터키 천문학자.png" style="width:500px; height:200px;">
+                                    <p>내가 소행성 B 612를 설명하며 굳이 숫자를 제시한 것은 모두 이들 어른들 때문이야. 
+                                        어른들은 숫자를 너무도 좋아해. 
+                                        내 새 친구를 소개할 때도 어른들은 이렇게 묻지 않아 절대로 말이야. 
+                                        "그 애의 목소리는 어떠니? 무슨 놀이를 좋아하니? 나비 수집을 좋아하니?" 
+                                        대신 어른들은 이렇게 묻지. 
+                                        "그 애 몇 살이니? 형제는 몇이니? 몸무게는 얼마니? 그 애 아빠 수입은 얼마라고?" 
+                                        </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b9" class="back-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <p>그리곤 어른들은 내 친구에 대해 다 안다고 생각해. 
+                                    만약 여러분이 어른들께 이리 말한다면, 
+                                    "그 애 집 창문엔 '제라늄'(풀 이름) 화분이 있고요, 지붕엔 비둘기들이 있고요, 분홍색 벽돌로 지어진 아름다운 집이..." 
+                                    그럼 어른들은 그게 뭔 말인지 따져보질 않지. 
+                                    그럼 우린 다시 이렇게 말해야 돼. 
+                                    "10만 프랑(프랑스 돈) 짜리 집을 보고 왔어요." 
+                                    그럼 어른들은 외치지. 
+                                    "정말 멋진 친구를 사귀는 구나!"
+                                    그래서 여러분이 어른들에게, 
+                                    "어린 왕자가 존재한다는 증거는 그 애가 기쁘했단 것과, 웃었다는 것과 양 한 마리를 그려 달라고 했다는 거예요. 양을 바랬다는건 그 애가 존재한 명백한 증거니까요."
+                                    라고 말한다면, 어른들은 어깨를 머쓱해보이며 널 애 취급하려 들거야! 
+                                    그치만 네가 어른에게 이렇게 말한다면, 
+                                    "그 애가 온 별은 소행성 B 612 이에요."
+                                    라고 말한다면, 어른들은 수긍을 하고 네게 질문공세를 그만 두는 거지. 
+                                    맞아 그들은 숫자를 좋아해. 
+                                    그게 우리가 그들을 탓할 바는 아니지. 이 점이 어린이들이 어른을 너그러이 봐주어야 되는 부분이야.
+                                    하지만, 물론, 삶을 이해한 이들에게도 숫자가 재미난 요소이긴해! 
+                                    그래서 요정 이야기 같은 내 얘기의 시작도 이렇게 해보려고해.
+                                    "옛날 옛적에 자기 자신보다 조금밖에 크지 않은 어느 별에서 살고 있던 어린 왕자가 하루는 친구가 필요했데요..." 
+                                    왜냐면 진실된 이에겐 친구가 소중한 그 이상이니까.
+                                    </p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 10 -->
+            <div id="p10" class="paper">
+                <div class="front">
+                    <div id="f10" class="front-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <p>내 책이 가볍게 읽히길 바라지 않기에, 이 기억들을 되새기는 게 살짝 미안해지긴해. 
+                                    내 친구가, 내가 그려준 양을 데리고 떠난 게 거의 6년 전 일이었으니까. 
+                                    만약 내가 여기서 그 애를 묘사하려 든다면, 그럼 안 되지만 기억이 가물해진 것도 사실이야. 
+                                    친구가 없는 사람은 없어. 
+                                    특히나 숫자만 좋아하는 어른을 이해하게 된 지금의 나에겐 더. 
+                                    그게 내가 물감과 연필 한 박스를 산 이유이기도 해. 
+                                    어렵사리 내 나이에 다시 그림에 손을 대어 본거지, 여섯 살 때 닫힌 보아 뱀과 열린 보아 뱀을 그려본 게 다였는 데도 말이야. 
+                                    물론 내가 그린 초상화가 어린 왕자를 닮긴 했어. 하지만 썩 성공적인 그림은 아니었지. 
+                                    한 부분을 그리고 나면, 다른 부분이 맞지 않았으니까. 
+                                    그걸 해결하고 나면 이번엔 몸집이 안 맞는 다거나 그런 실수들 알잖아. 
+                                    이 그림에선 어린 왕자가 너무 크거나 그런 경우 말이야. 또는 너무 작게 그렸던가. 또는 옷 색깔을 칠하며 너무 어설프게 색을 칠했다거나. 이리 저리 만지작거리다 어영부영 세부적인 모습보다 더 중요했던 걸 망치고 마는 식이지. 
+                                    그치만 큰 실수는 아냐. 
+                                    친구에겐 해명이 필요 없으니까. 
+                                    내가 그 애를 못 그렸던 잘 그렸던 그 애는 내가 그 앨 좋아한다는 걸 알 테니 말이야. 
+                                    그치만 불행히도 지금의 난 나무 상자에서 양들을 보는 방법을 몰라. 
+                                    어른이 다 되었거든. 
+                                    좀 더 나이 먹은 어른이, 말이야.
+                                    </p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b10" class="back-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <h1>5장</h1>
+                                <p>매일 난 그 별과 떠나온 이유, 여행에 대해 알게 돼.
+                                    그러다 보다 좀 더 귀 기울이게 된 계기가 하나 있는데. 
+                                    셋째 날 난 바오밥나무에 대해 알게 된 거야.
+                                    물론 이건 양 덕분이야, 어린 왕자가 순간 진지해져선 내게 이렇게 물었거든. 
+                                    "진짜에요, 양이 작은 나무를 먹어요?
+                                    "그렇단다, 진짜란다."
+                                    "아! 행복해!"
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 11 -->
+            <div id="p11" class="paper">
+                <div class="front">
+                    <div id="f11" class="front-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <img src="./images/코끼리들.png" style="width: 400px; height:400px;">
+                                <p>양이 작은 나무들을 먹는다는 게 뭐가 그리 행복하다는 건지 나로선 도통 알 수가 없었어. 
+                                    그치만 어린 왕자가 이렇게 또 묻더군.
+                                    "그럼 바오밥나무도 먹나요?"
+                                    난 어린 왕자에게 바오밥나무는 작은 나무로 볼 수 없잖니,라고 말해주었어. 
+                                    바오밥나무는 교회처럼 큰 나무라는 거지. 
+                                    코끼리를 떼거지로 데려와 옮기더라도 바오밥나무 하나를 쉬이 옮기지 못할 거란 얘기도 덧붙여주었지.
+                                    코끼리 떼거지란 말에 어린 왕자가 웃었어.
+                                    "코끼리들을 하나씩 쌓아 올려야 할 거에요..." 
+                                    곧 어린 왕자가 진지하게 덧붙였어.
+                                    "바오밥나무도, 다 자라기 전엔, 아주 작은 크기에서 시작했을 테니까요." 
+                                    "그래! 그럼 넌 작은 바보밥나무를 먹게 하려고 양들을 데려가려는 거구나?" 
+                                    그 애가 답하더군. 
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b11" class="back-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <p>"네! 들어봐요!"
+                                    그건 알기 쉬우면서도, 나로 하여금 이 문제를 이해하기 위해 무척 애를 쓰게 만들었어.
+                                    정말, 어린 왕자의 별에선, 좋은 풀과 나쁜 풀이 있데. 그러니까 좋은 씨앗과 나쁜 씨앗도 있다는 거지. 하지만 씨앗들은 눈엔 안 보인데. 땅 속에서 잠을 자고 있다 깨어날 때가 되기만 기다린다는 거지. 그러다 기쁘게도 태양을 향해 그 수줍은 새 싹을 내민다는군. 무(먹는 무)나 장미 가지인 경우 자긴 그냥 자라게 둬도 된데. 그치만 나쁜 풀일 경우엔 발견하는 즉시 뽑아버려야 한데. 현재 어린 왕자의 별엔 나쁜 씨앗들이 많데... 바오밥나무의 씨앗들 말이야. 별의 땅 속에 잔뜩 있다는 거야. 바오밥나무가 생기고 너무 오래 방치하게 되면 더는 뽑을 수도 없단 말도 해주었어. 그럼 그 별 전체가 그것이 파묻혀서 땅 속까지 오염돼고 마는 거지. 만약 그 별이 작은 별이라면 너무 크진 바오밥나무로 인해 한순간 산산이 부서지고 만데.
+                                    "그건 습관의 문제에요."
+                                    라며 어린 왕자가 후에 말하더군. 
+                                    "아침에 세수를 하고 별을 다듬어주는 거와 같은 세심함이 필요해요. 아주 어릴 때는 둘이 무척 닮았어요, 그치만 바오밥나무가 장미와 구분되는 순간부턴 정기적으로 뽑아 줘야해요. 아주 귀찮긴 하지만 무척 간단한 일이기도 해요."                                    
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 12 -->
+            <div id="p12" class="paper">
+                <div class="front">
+                    <div id="f12" class="front-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <img src="./images/별 몸단장.png" style="width: 400px; height:400px;">
+                                <p>언젠가 그 애는 내게 아름다운 그림 하나를 그려달라더군, 지구별 어린이들이 기억할 수 있게 말이야. 
+                                    "그 애들이 언젠가 여행을 떠날 때,"
+                                    라며 어린 왕자가 말하더군. 
+                                    "도움이 될 거에요. 뭔가를 미루는 습관은 안 좋거든요. 특히나 바오밥나무 같은 경우는 대참사를 일으키죠. 어느 게으른뱅이가 별에 살았는데. 작은 나무 세 개를 방치했다가 그만...”                                                                     
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b12" class="back-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <img src="./images/바오밥나무들.png" style="width: 400px; height:400px;">
+                                <p>그래서, 어린 왕자의 간절함 덕분에, 난 그 별을 그릴 수 있었단다.                                                                     
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 13 -->
+            <div id="p13" class="paper">
+                <div class="front">
+                    <div id="f13" class="front-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <img src="./images/구별이 잘 안가는, 어린바오밥나무들과 어린 장미들.png" style="width: 400px; height:400px;">
+                                <p>렇다고 여기서 도덕주의자인 체하고 싶진 않지만, 그치만 바오밥나무의 교훈이 워낙에 작지 않기에, 또 누구든 소행성을 여행하며 그 위험에 마주칠 수 있는 법이니까, 그게 나에게만 벌어지지 말란 법은 없으니까 말이야. 
+                                    그래서 이렇게 꼭 말해주고 싶어. 
+                                    "어린 아이들이여! 바오밥나무를 조심하라! 내가 이렇듯 오랜 시간을 들여 그림을 그린 이 유는, 아무 것도 모르던 나 자신처럼 오랜 시간 위험에 빠져 있는 친구들에게 경고를 보내주기 위함이다. 내가 주고 싶은 교훈은 이거 하나면 충분해. 그럼 여러분은 또 궁금해지겠지. 이 책엔 왜 바오밥나무 그림만큼 폼 나는 다른 그림이 없나고? 답은 무척 간단해. 사실 다른 그림들도 그려보려 무진 애 써보았지만, 내가 이 바오밥나무를 그릴 때에 가장 경각심이 들었기 때문이야.”
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b13" class="back-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <h1>6장</h1>
+                                <p>
+                                    어린 왕자, 난 이제 알겠어, 조금씩, 네 어리고 쓸쓸하던 삶을. 
+                                    넌 지는 해를 바라보며 오래도록 앉아있곤 했다지. 
+                                    4일째 아침 네가 이렇게 말했을 때 난 새로운 걸 알게 되었지.
+                                    "전 해질녘이 좋아요. 해지는 거 보러가요..." 
+                                    "좀 더 기다려야 할 텐데..."
+                                    "기다린다니요?"
+                                    "해가 질 때까지 말이다."
+                                    처음엔 너도 무척 낯선 표정이더군. 
+                                    그런 다음 혼자 웃더군. 
+                                    그러더니 내게 말했지. 
+                                    "집인줄 알았어요!"
+                                    정말. 미국 정오 때는 말이야, 모두들 알다시피, (미국 정오 때는) 프랑스에선 해가 지지. 1분 만에 프랑스로 날아갈 수 있다면 해지는 걸 볼 수 있어. 
+                                    불행히도 프랑스가 지금 너무 멀리 떨어져 있어 못갈 뿐이지. 
+                                    그치만 너의 별에선 몇 발자국만 의자를 당겨앉으면 되겠더구나. 
+                                    그럼 넌 마음껏 여명을 바라볼 수 있다지...
+                                                                                                         
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Paper14-->
+            <div id="p14" class="paper">
+                <div class="front">
+                    <div id="f14" class="front-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                <p>"한 번은 해가 지는 걸 마흔 네 번이나 본 적이 있는 걸요!" 
+                                    잠시 네가 덧붙이더구나.
+                                    "왜... 해질 녘이 좋아질 정도로 슬플 때가 있잖아요..." 
+                                    "마흔 네 번이나 볼 정도로 슬펐다는 거니?"
+                                    그치만 어린 왕자는 아무런 말이 없더구나.                                                                    
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b14" class="back-content">
+                        <div class="contentName">
+                            <div class="bookcontent">
+                                7장 넘어가기
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Next Button -->
+        <button id="next-btn">
+            <i class="fas fa-arrow-circle-right"></i>
+        </button>
+        <!--페이지가 다 끝나면 나타나야함.-->
+        <div class="quizShow">
+            <div class="home-box custom-box">
+                <h3>단원명</h3>
+                <p>전체 문제 수: <span class="total-question"></span> 문제</p>
+                <button type="button" class="btn" onclick="startQuiz()">시작!!</button>
+            </div>
+
+            <div class="quiz-box custom-box hide">
+                <div class="question-number">
+         
+                </div>
+                <div class="question-text">
+         
+                </div> 
+                <div class="option-container">
+         
+                </div>
+                <div class="next-question-btn">
+                    <button type="button" class="btn" onclick="next()">다음 문제</button>
+                </div>
+                <div class="answers-indicator">
+          
+                </div>
+            </div>
+        
+            <div class="result-box custom-box hide">
+                <h1>결과</h1>
+                <table>
+                    <tr>
+                        <td>전체 문제 수</td>
+                        <td><span class="total-question"></span></td>
+                    </tr>
+                    <tr>
+                        <td>풀어본 문제 수</td>
+                        <td><span class="total-attempt"></span></td>
+                    </tr>
+                    <tr>
+                        <td>맞춘 문제 수</td>
+                        <td><span class="total-correct"></span></td>
+                    </tr>
+                    <tr>
+                        <td>틀린 문제 수</td>
+                        <td><span class="total-wrong"></span></td>
+                    </tr>
+                    <tr>
+                        <td>정답률</td>
+                        <td><span class="percentage"></span></td>
+                    </tr>
+                    <tr>
+                        <td>당신의 점수는?</td>
+                        <td><span class="total-score"></span></td>
+                    </tr>
+                </table>
+                <button type="button" class="btn" onclick="tryAgainQuiz()">다시 풀어볼까요?</button>
+                <button type="button" class="btn" onclick="goToHome()">처음으로</button>
+            </div>
+        
+        </div>
+    </div>
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
